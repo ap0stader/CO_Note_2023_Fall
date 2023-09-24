@@ -98,40 +98,31 @@
     <wire from="(210,150)" to="(220,150)"/>
     <wire from="(70,40)" to="(400,40)"/>
     <wire from="(140,210)" to="(340,210)"/>
-    <comp lib="3" loc="(320,290)" name="Shifter"/>
-    <comp lib="0" loc="(270,150)" name="Constant">
-      <a name="width" val="3"/>
-    </comp>
-    <comp lib="4" loc="(240,130)" name="Register"/>
-    <comp lib="4" loc="(240,280)" name="Register"/>
-    <comp lib="0" loc="(270,300)" name="Constant">
-      <a name="width" val="3"/>
+    <comp lib="0" loc="(120,270)" name="Constant">
+      <a name="width" val="8"/>
     </comp>
     <comp lib="1" loc="(120,130)" name="AND Gate">
       <a name="width" val="8"/>
       <a name="size" val="30"/>
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="3" loc="(320,140)" name="Shifter"/>
-    <comp lib="0" loc="(100,330)" name="Clock"/>
     <comp lib="0" loc="(220,320)" name="Clock">
       <a name="facing" val="north"/>
     </comp>
-    <comp lib="0" loc="(100,350)" name="Constant"/>
-    <comp lib="2" loc="(190,280)" name="Multiplexer">
-      <a name="width" val="8"/>
-    </comp>
+    <comp lib="3" loc="(320,140)" name="Shifter"/>
     <comp lib="0" loc="(250,70)" name="Constant">
       <a name="width" val="8"/>
       <a name="value" val="0x0"/>
     </comp>
-    <comp lib="1" loc="(190,130)" name="OR Gate">
-      <a name="width" val="8"/>
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
+    <comp lib="0" loc="(270,150)" name="Constant">
+      <a name="width" val="3"/>
     </comp>
     <comp lib="3" loc="(320,80)" name="Comparator"/>
-    <comp lib="0" loc="(60,140)" name="Constant">
+    <comp lib="0" loc="(100,350)" name="Constant"/>
+    <comp lib="0" loc="(220,170)" name="Clock">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="2" loc="(190,280)" name="Multiplexer">
       <a name="width" val="8"/>
     </comp>
     <comp lib="0" loc="(380,80)" name="Bit Extender">
@@ -139,11 +130,21 @@
       <a name="out_width" val="8"/>
       <a name="type" val="sign"/>
     </comp>
-    <comp lib="0" loc="(120,270)" name="Constant">
+    <comp lib="0" loc="(270,300)" name="Constant">
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="3" loc="(320,290)" name="Shifter"/>
+    <comp lib="0" loc="(100,330)" name="Clock"/>
+    <comp lib="0" loc="(60,140)" name="Constant">
       <a name="width" val="8"/>
     </comp>
-    <comp lib="0" loc="(220,170)" name="Clock">
-      <a name="facing" val="north"/>
+    <comp lib="1" loc="(190,130)" name="OR Gate">
+      <a name="width" val="8"/>
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
     </comp>
+    <comp lib="4" loc="(240,130)" name="Register"/>
+    <comp lib="4" loc="(240,280)" name="Register"/>
+    <comp lib="4" loc="(160,330)" name="D Flip-Flop"/>
   </circuit>
 </project>
