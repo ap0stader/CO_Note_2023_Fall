@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-#define MAXN 1000
+#define N 1000
 
-int result[MAXN];
+int result[N];
 
 int main() {
     int n;
@@ -11,25 +11,25 @@ int main() {
     result[0] = 1;
 
     for (int i = 2; i <= n; i++) {
-        int upper = 0;
+        int in = 0;
 
-        for (int j = 0; j < MAXN; j++) {
-            int part_result = result[j] * i + upper;
-            result[j] = part_result % 10;
-            upper = part_result / 10;
+        for (int j = 0; j < N; j++) {
+            int temp_result = result[j] * i + in;
+            result[j] = temp_result % 10;
+            in = temp_result / 10;
         }
     }
 
-    int upper_number = 0;
+    int top_number = 0;
 
-    for (int i = MAXN - 1; i >= 0; i--) {
+    for (int i = N - 1; i >= 0; i--) {
         if (result[i] != 0) {
-            upper_number = i;
+            top_number = i;
             break;
         }
     }
 
-    for (int i = upper_number; i >= 0; i--) {
+    for (int i = top_number; i >= 0; i--) {
         printf("%d", result[i]);
     }
 }
